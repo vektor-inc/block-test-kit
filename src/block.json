@@ -1,0 +1,14 @@
+{
+	"name": "create-block/block-test-kit",
+	"title": "Block Test Kit",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"textdomain": "block-test-kit",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
