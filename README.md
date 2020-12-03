@@ -44,7 +44,7 @@
     - パースしたブロックを`serialize`でシリアライズした状態。
     - 実際に再シリアライズした投稿内容と比較してテストする。投稿を再編集した状態を再現する。
 
-#### フィクスチャーを作成
+#### フィクスチャーを新規作成
 
 1. `e2e-tests/fixtures/blocks/`にフィクスチャー用のHTMLファイルを作成。例：`core__image.html`
 2. テストしたいブロックを、ブロックエディタに挿入。
@@ -53,6 +53,7 @@
 
 以下を実行して、2-4のフィクスチャーを作成する。
 `npm run fixtures:regenerate test/integration/full-content/full-content.test.js`
+
 
 ###### Deprecatedを追加したブロックのフィクスチャーを作成
 上記と同じ手順で、古いフィクスチャーのファイル名を `core__audio__deprecated-1.html`のように変更する。
