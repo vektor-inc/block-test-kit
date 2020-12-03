@@ -8,7 +8,7 @@
 - wp-scripts使用。（webpack.config.jsをカスタムしていた時は動作しない場合があります）
 
 ## 実行手順
-`$ npm install`
+`$ npm install`  
 `$ npm run test-unit`
 
 ## 自分のプラグインにテストを実装する場合
