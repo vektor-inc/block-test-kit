@@ -54,5 +54,10 @@
 以下を実行して、2-4のフィクスチャーを作成する。
 `npm run fixtures:regenerate test/integration/full-content/full-content.test.js`
 
+###### Deprecatedを追加したブロックのフィクスチャーを作成
+上記と同じ手順で、古いフィクスチャーのファイル名を `core__audio__deprecated-1.html`のように変更する。
+
+例：https://github.com/WordPress/gutenberg/blob/master/packages/e2e-tests/fixtures/blocks/core__audio__deprecated-1.html
+
 ## 参考
 https://github.com/WordPress/gutenberg/blob/master/packages/e2e-tests/fixtures/blocks/README.md
