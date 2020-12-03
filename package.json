@@ -7,6 +7,7 @@
 	"main": "build/index.js",
 	"scripts": {
 		"start": "wp-env start",
+		"stop": "wp-env stop",
 		"build": "wp-scripts build",
 		"fixtures:clean": "rimraf \"packages/e2e-tests/fixtures/blocks/*.+(json|serialized.html)\"",
 		"fixtures:generate": "cross-env GENERATE_MISSING_FIXTURES=y npm run test-unit",
