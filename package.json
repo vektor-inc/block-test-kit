@@ -15,10 +15,9 @@
 		"test-unit": "wp-scripts test-unit-js --config test/jest.config.js"
 	},
 	"devDependencies": {
-		"@emotion/babel-plugin": "^11.0.0",
-		"@wordpress/blocks": "^6.24.2",
 		"@wordpress/env": "^2.1.0",
 		"@wordpress/scripts": "^12.5.0",
+		"@emotion/babel-plugin": "^11.0.0",
 		"babel-plugin-inline-json-import": "^0.3.2",
 		"cross-env": "^7.0.3",
 		"jest-transform-stub": "^2.0.0"
