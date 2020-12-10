@@ -38,8 +38,13 @@ Deprecated テストを実行するには、各ブロックのフィクスチャ
 3. コードエディターで開き、ブロックマークアップをコピー。
 4. 1で作成したファイルに貼り付け。
 
-以下を実行して、2-4のフィクスチャーを作成する。
+以下を実行してフィクスチャーを作成する。
 `npm run fixtures:regenerate test/integration/full-content/full-content.test.js`
+
+成功すると、以下のようなファイルが生成されます。
+- `core__image.json`
+- `core__image.parsed.json`
+- `core__image.serialized.html`
 
 ### Deprecatedフィクスチャーを作成
 deprecated をブロックに追加した場合には、以下のように deprecated フィクスチャーを作成します。
