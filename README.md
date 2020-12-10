@@ -46,10 +46,9 @@ Deprecated テストを実行するには、各ブロックのフィクスチャ
 - `core__image.parsed.json`
 - `core__image.serialized.html`
 
-## 実行手順
+## テスト実行
 上記の、準備1,2を完了後、以下のコマンドでdeprecatedテストを実行します。
 
-`$ npm install`  
 `$ npm run test-unit`
 
 
