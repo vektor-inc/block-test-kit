@@ -14,7 +14,7 @@
 ## 自分のプラグインにテストを実装する場合
 `$ npm install @emotion/babel-plugin babel-plugin-inline-json-import cross-env jest-transform-stub @wordpress/blocks --save-dev`
 
-`babel.config.js` と `test/` ディレクトリを、プロジェクトルートにコピー。
+`babel.config.js` と `test/`を、プロジェクトルートにコピー。
 
 以下を自分のpackage.jsonにコピー。
 ```package.json
