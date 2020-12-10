@@ -46,10 +46,6 @@ Deprecated テストを実行するには、各ブロックのフィクスチャ
 - `core__image.parsed.json`
 - `core__image.serialized.html`
 
-### Deprecatedフィクスチャーを作成
-deprecated をブロックに追加した場合には、以下のように deprecated フィクスチャーを作成します。
-上記と同じ手順で、古いフィクスチャーのファイル名を `core__audio__deprecated-1.html`のように変更する。
-
 ## 実行手順
 上記の、準備1,2を完了後、以下のコマンドでdeprecatedテストを実行します。
 
@@ -72,6 +68,11 @@ deprecated をブロックに追加した場合には、以下のように depre
 7. fixture-name.serialized.html
     - パースしたブロックを`serialize`でシリアライズした状態。
     - 実際に再シリアライズした投稿内容と比較してテストする。投稿を再編集した状態を再現する。
+    
+### Deprecatedフィクスチャーを作成
+deprecated をブロックに追加した場合には、以下のように deprecated フィクスチャーを作成します。
+上記と同じ手順で、古いフィクスチャーのファイル名を `core__audio__deprecated-1.html`のように変更する。
+
 
 ## 参考
 https://github.com/WordPress/gutenberg/blob/master/packages/e2e-tests/fixtures/blocks/README.md
