@@ -13,7 +13,7 @@
 
 ### 1.設定ファイルを用意
 
-1. `$ npm install @emotion/babel-plugin babel-plugin-inline-json-import cross-env jest-transform-stub @wordpress/blocks --save-dev`
+1. `$ npm install @emotion/babel-plugin babel-plugin-inline-json-import cross-env jest-transform-stub @wordpress/blocks @wordpress/block-serialization-default-parser --save-dev`
 
 2. `babel.config.js` と `test/`を、プロジェクトルートにコピー。
 
