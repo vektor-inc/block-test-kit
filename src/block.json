@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "example/alert",
+	"name": "block-test-kit/alert",
 	"category": "widgets",
 	"attributes": {
 		"style": {

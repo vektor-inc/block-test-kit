@@ -10,17 +10,17 @@ import { format } from 'util';
  */
 import {
 	getBlockTypes,
-	getCategories,
-	setCategories,
 	parse,
 	serialize,
 	unstable__bootstrapServerSideBlockDefinitions, // eslint-disable-line camelcase
 } from '@wordpress/blocks';
 import { parse as grammarParse } from '@wordpress/block-serialization-default-parser';
-import {
-	registerCoreBlocks,
-	__experimentalRegisterExperimentalCoreBlocks,
-} from '@wordpress/block-library';
+import { registerMyBlock } from '../../../src';
+
+/**
+ * NOTE: node moudle内から、utils.jsをコピーしてパスを書き換え。
+ * 元は、'@wordpress/e2e-tests/fixtures' を参照。
+ */
 //eslint-disable-next-line no-restricted-syntax
 import {
 	blockNameToFixtureBasename,
@@ -32,15 +32,9 @@ import {
 	writeBlockFixtureParsedJSON,
 	writeBlockFixtureJSON,
 	writeBlockFixtureSerializedHTML,
-/**
- * NOTE: node moudle内から、utils.jsをコピーしてパスを書き換え。
- * 元は、'@wordpress/e2e-tests/fixtures' を参照。
- */
 } from '../../e2e-tests/fixtures/utils';
 
 const blockBasenames = getAvailableBlockFixturesBasenames();
-
-import { registerVKBlocks } from '@vkblocks/blocks';
 
 function normalizeParsedBlocks( blocks ) {
 	return blocks.map( ( block, index ) => {
@@ -77,11 +71,8 @@ describe( 'full post content fixture', () => {
 
 		unstable__bootstrapServerSideBlockDefinitions( blockDefinitions );
 
-		//コアブロック登録
-		// registerCoreBlocks();
-
 		//カスタムブロック登録
-		registerVKBlocks();
+		registerMyBlock();
 	} );
 
 	blockBasenames.forEach( ( basename ) => {
