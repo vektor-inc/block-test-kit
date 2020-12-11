@@ -5,6 +5,7 @@
 import edit from './edit';
 import metadata from './block.json';
 import save from './save';
+// import deprecated from './deprecated'
 
 import './style.scss';
 
@@ -23,6 +24,7 @@ export const settings = {
 	icon: 'smiley',
 	save,
 	edit,
+	// deprecated,
 };
 
 export const registerMyBlock = ( block ) => {

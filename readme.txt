@@ -1,5 +1,5 @@
 === Block Test Kit ===
-Contributors:      The WordPress Contributors
+Contributors:      Naoki Ohashi
 Tags:              block
 Requires at least: 5.5.0
 Tested up to:      5.5.1
