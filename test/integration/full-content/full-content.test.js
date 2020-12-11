@@ -21,10 +21,10 @@ import {
 	unstable__bootstrapServerSideBlockDefinitions, // eslint-disable-line camelcase
 } from '@wordpress/blocks';
 import { parse as grammarParse } from '@wordpress/block-serialization-default-parser';
-// import {
-// 	registerCoreBlocks,
-// 	__experimentalRegisterExperimentalCoreBlocks,
-// } from '@wordpress/block-library';
+import {
+	registerCoreBlocks,
+	__experimentalRegisterExperimentalCoreBlocks,
+} from '@wordpress/block-library';
 //eslint-disable-next-line no-restricted-syntax
 import {
 	blockNameToFixtureBasename,
@@ -84,8 +84,8 @@ describe( 'full post content fixture', () => {
 		// Load all hooks that modify blocks
 		// require( '../../../packages/editor/src/hooks' );
 
-		//TODO: 下のコアブロックを取得する関数の代わりに、カスタムブロック一覧の引数を渡す
-		// registerCoreBlocks();
+		//TODO: 下のコアブロックを取得する関数の代わりに、カスタムブロック一覧を登録する
+		registerCoreBlocks();
 
 		// カスタムブロックを登録
 		// const customBlocks = getCustomBlocks();
