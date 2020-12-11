@@ -1,80 +1,40 @@
 /**
- * Registers a new block provided a unique name and an object defining its behavior.
+ * Alert block type
  *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-import { registerBlockType } from '@wordpress/blocks';
-
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
-import { __ } from '@wordpress/i18n';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './style.scss';
-
-/**
- * Internal dependencies
- */
-import Edit from './edit';
+import edit from './edit';
+import metadata from './block.json';
 import save from './save';
 
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
- */
-registerBlockType( 'block-test-kit/example', {
-	/**
-	 * This is the display title for your block, which can be translated with `i18n` functions.
-	 * The block inserter will show this name.
-	 */
-	title: __( 'Block Test Kit', 'block-test-kit' ),
+import './style.scss';
 
-	/**
-	 * This is a short description for your block, can be translated with `i18n` functions.
-	 * It will be shown in the Block Tab in the Settings Sidebar.
-	 */
-	description: __(
-		'Example block written with ESNext standard and JSX support – build step required.',
-		'block-test-kit'
-	),
+import { __ } from '@wordpress/i18n';
+import {
+	registerBlockType,
+	unstable__bootstrapServerSideBlockDefinitions, // eslint-disable-line camelcase
+} from '@wordpress/blocks';
 
-	/**
-	 * Blocks are grouped into categories to help users browse and discover them.
-	 * The categories provided by core are `common`, `embed`, `formatting`, `layout` and `widgets`.
-	 */
-	category: 'widgets',
+const { name } = metadata;
 
-	/**
-	 * An icon property should be specified to make it easier to identify a block.
-	 * These can be any of WordPress’ Dashicons, or a custom svg element.
-	 */
+export { metadata, name };
+
+export const settings = {
+	title: __('Alert', 'block-test-kit'),
 	icon: 'smiley',
-
-	/**
-	 * Optional block extended support features.
-	 */
-	supports: {
-		// Removes support for an HTML mode.
-		html: false,
-	},
-
-	/**
-	 * @see ./edit.js
-	 */
-	edit: Edit,
-
-	/**
-	 * @see ./save.js
-	 */
 	save,
-} );
+	edit,
+};
+
+export const registerMyBlock = ( block ) => {
+	if ( ! block ) {
+		return;
+	}
+	const { metadata, settings, name } = block;
+	if ( metadata ) {
+		unstable__bootstrapServerSideBlockDefinitions( { [ name ]: metadata } );
+	}
+	registerBlockType( name, settings );
+};
+
+//ブロックを登録
+registerMyBlock({ metadata, settings, name });

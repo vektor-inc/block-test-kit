@@ -12,12 +12,14 @@
 		"fixtures:clean": "rimraf \"packages/e2e-tests/fixtures/blocks/*.+(json|serialized.html)\"",
 		"fixtures:generate": "cross-env GENERATE_MISSING_FIXTURES=y npm run test-unit",
 		"fixtures:regenerate": "npm run fixtures:clean && npm run fixtures:generate",
-		"test-unit": "wp-scripts test-unit-js --config test/jest.config.js"
+		"test-unit": "wp-scripts test-unit-js --config test/jest.config.js test/integration/full-content/full-content.test.js"
 	},
 	"devDependencies": {
+		"@emotion/babel-plugin": "^11.1.2",
+		"@wordpress/block-serialization-default-parser": "^3.8.0",
+		"@wordpress/blocks": "^6.24.2",
 		"@wordpress/env": "^2.1.0",
 		"@wordpress/scripts": "^12.5.0",
-		"@emotion/babel-plugin": "^11.0.0",
 		"babel-plugin-inline-json-import": "^0.3.2",
 		"cross-env": "^7.0.3",
 		"jest-transform-stub": "^2.0.0"

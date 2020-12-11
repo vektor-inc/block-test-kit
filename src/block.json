@@ -1,14 +1,19 @@
 {
-	"name": "block-test-kit/example",
-	"title": "Block Test Kit",
+	"apiVersion": 2,
+	"name": "example/alert",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"textdomain": "block-test-kit",
-	"supports": {
-		"html": false
+	"attributes": {
+		"style": {
+			"type": "string",
+			"default": "info"
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		}
 	},
-	"editorScript": "file:./build/index.js",
-	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+	"supports": {
+		"className": true
+	}
 }

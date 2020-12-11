@@ -52,10 +52,14 @@ function create_block_block_test_kit_block_init() {
 		filemtime( "$dir/$style_css" )
 	);
 
-	register_block_type( 'create-block/block-test-kit', array(
-		'editor_script' => 'create-block-block-test-kit-block-editor',
-		'editor_style'  => 'create-block-block-test-kit-block-editor',
-		'style'         => 'create-block-block-test-kit-block',
-	) );
+	register_block_type_from_metadata(
+		__DIR__ . '/src',
+		array(
+			'editor_script' => 'create-block-block-test-kit-block-editor',
+			'editor_style'  => 'create-block-block-test-kit-block-editor',
+			'style'         => 'create-block-block-test-kit-block',
+		)
+	);
+
 }
 add_action( 'init', 'create_block_block_test_kit_block_init' );
