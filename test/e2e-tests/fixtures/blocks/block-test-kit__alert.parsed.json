@@ -1,0 +1,20 @@
+[
+    {
+        "blockName": "block-test-kit/alert",
+        "attrs": {},
+        "innerBlocks": [],
+        "innerHTML": "\n<div class=\"wp-block-block-test-kit-alert alert alert-info\"><p>Hello World!</p></div>\n",
+        "innerContent": [
+            "\n<div class=\"wp-block-block-test-kit-alert alert alert-info\"><p>Hello World!</p></div>\n"
+        ]
+    },
+    {
+        "blockName": null,
+        "attrs": {},
+        "innerBlocks": [],
+        "innerHTML": "\n",
+        "innerContent": [
+            "\n"
+        ]
+    }
+]

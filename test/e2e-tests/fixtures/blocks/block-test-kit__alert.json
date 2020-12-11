@@ -1,0 +1,13 @@
+[
+    {
+        "clientId": "_clientId_0",
+        "name": "block-test-kit/alert",
+        "isValid": true,
+        "attributes": {
+            "style": "info",
+            "content": "Hello World!"
+        },
+        "innerBlocks": [],
+        "originalContent": "<div class=\"wp-block-block-test-kit-alert alert alert-info\"><p>Hello World!</p></div>"
+    }
+]
