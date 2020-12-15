@@ -6,7 +6,7 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"start": "wp-env start",
+		"start": "npm run build && wp-env start",
 		"stop": "wp-env stop",
 		"build": "wp-scripts build",
 		"fixtures:clean": "rimraf \"packages/e2e-tests/fixtures/blocks/*.+(json|serialized.html)\"",
@@ -25,8 +25,5 @@
 		"babel-plugin-inline-json-import": "^0.3.2",
 		"cross-env": "^7.0.3",
 		"jest-transform-stub": "^2.0.0"
-	},
-	"wp-env": {
-		"welcome-build-command": "npm run build"
 	}
 }
