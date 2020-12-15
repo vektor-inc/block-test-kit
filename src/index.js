@@ -5,7 +5,7 @@
 import edit from './edit';
 import metadata from './block.json';
 import save from './save';
-// import deprecated from './deprecated'
+import deprecated from './deprecated'
 
 import './style.scss';
 
