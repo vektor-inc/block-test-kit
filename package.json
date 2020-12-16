@@ -11,7 +11,7 @@
 		"build": "wp-scripts build",
 		"fixtures:clean": "rimraf \"packages/e2e-tests/fixtures/blocks/*.+(json|serialized.html)\"",
 		"fixtures:generate": "cross-env GENERATE_MISSING_FIXTURES=y npm run test-unit",
-		"fixtures:regenerate": "rm test/e2e-tests/fixtures/blocks/*.json && rm test/e2e-tests/fixtures/blocks/*.serialized.html && npm run fixtures:clean && npm run fixtures:generate",
+		"fixtures:regenerate": "npm run fixtures:clean && npm run fixtures:generate",
 		"test-unit": "npm run build && wp-scripts test-unit-js --config test/jest.config.js test/integration/full-content/full-content.test.js"
 	},
 	"devDependencies": {
