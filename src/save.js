@@ -7,7 +7,7 @@ export default function save({ attributes }) {
 
 	return (
 		<div { ...useBlockProps.save( { className: `alert alert-${style}`} ) }>
-			<RichText.Content tagName={'p'} value={content} />
+			<RichText.Content tagName={'div'} value={content} />
 		</div>
 	);
 }
